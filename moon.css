@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('fonts/PixelifySans.ttf') format('truetype');
+}
+  
+body {
+  background: linear-gradient(to bottom, #0b1e33, #000814);
+  color: rgb(244, 215, 215);
+  font-family: 'PixelifySans', sans-serif;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #d6b9f3;
+  text-shadow: 0 0 3px #be92e9;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+#control {
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+#phase-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#moon-img {
+  width: 100%;
+  max-width: 250px; 
+  height: auto;
+  margin-top: 0.5rem;
+  animation: floatIn 1s ease forwards;
+  filter: drop-shadow(0 0 10px #ffe066);
+  transition: all 0.5s ease;
+}
+
+#pick-date {
+  font-family: 'PixelifySans', sans-serif;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+#desc {
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #f5c771;
+}
+
+#special-note {
+  margin: 1rem;     
+  font-family: 'Caveat', cursive; 
+  font-style: italic;
+  font-size: 1rem;
+  color: #f4b4a4;
+  text-shadow: 0 0 3px #ffe066;  
+}
+
+button {
+  font-family: 'PixelifySans', sans-serif;
+  background-color: #bacfe6;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 12px;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #506b8a;
+  box-shadow: 0 0 10px #f8e161;
+  transform: scale(1.05);
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+  
+#phase-name, #desc {
+  animation: popIn 0.8s ease forwards;
+}
+  
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; 
+}
+  
+.cloud {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: radial-gradient(circle at center, #ffffff44 30%, transparent 60%);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.10;
+  animation: floatClouds linear infinite;
+}
+  
+@keyframes floatClouds {
+  0% {
+    transform: translateX(-250px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}  
+
+#desc-text {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: auto;
+    font-size: 1rem;
+    max-width: 90vw;
+    padding: 0.75rem 1rem;
+  }
+
+  #moon-img {
+    width: 70vw;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  #phase-name {
+    font-size: 1.2rem;
+  }
+
+  #main {
+    max-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+}
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Moon phase</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="moon.css" />
+        <script src="moon.js" defer></script>
+    </head>
+    <body>        
+        <div id="clouds"></div>
+        <div id="main">
+        <h2>Hey there, my love ❤️</h2>
+        <h1>What does the moon look like today?</h1>
+
+        <div id="control">
+            <input type="date" id="pick-date">
+            <button id="today">today</button>
+        </div>
+        <div id="special-note"></div>
+
+        <img src="" alt="moon-phase" id="moon-img" />
+
+        <div id="phase-name"></div>
+
+        <div id="desc">
+            <button id="phase-desc">See description</button>
+            <p id="desc-text" style="display: none;"></p>
+        </div>
+        
+        <audio id="clickSound" src="knock.mp3" preload="auto"></audio>
+
+        <div id="special-song-container" style="display: none;">
+            <button id="play-song">Play Special Song 🎵</button>
+            <audio id="special-song" src="Mitski - My Love Mine All Mine.mp3" preload="auto"></audio>
+          </div>
+        
+        </div>          
+    </body>
+</html>
