@@ -4,4 +4,4 @@
 - CSS
 - Javascript
 
-# Made the app responsive to work on smaller screens
+- Made the app responsive to work on smaller screens
